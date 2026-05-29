@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:baggu.com)",
+      "Bash(python3 -c ' *)",
+      "Bash(textutil -convert txt -stdout 'TEDx BIGZ Youth Website Outline.docx')",
+      "Bash(pandoc 'TEDx BIGZ Youth Website Outline.docx' -t plain)",
+      "WebSearch",
+      "WebFetch(domain:www.sitefav.com)",
+      "WebFetch(domain:www.refs.gallery)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(curl -s http://localhost:5173)",
+      "Bash(open *)",
+      "Bash(tesseract /Users/richardjiang/Desktop/GitHub/tedx-official/timeline.png -)",
+      "Bash(gh auth *)",
+      "Bash(gh api *)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
+    ]
+  }
+}

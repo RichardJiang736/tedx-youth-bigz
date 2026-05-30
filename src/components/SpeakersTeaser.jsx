@@ -9,6 +9,20 @@ const speakerImages = (name, num) => ({
 
 const speakers = [
   {
+    name: 'Dr. Ilona Stricof',
+    ...speakerImages('Dr. Ilona Stricof', 7),
+    role: 'BIGZ AP Teacher',
+    tag: 'PhD in Islamic History, Columbia University',
+    talk: "Guangzhou's Role on the Silk Road of the Abbasid Caliphate — how the thousand-year trade legacy continues to shape the city today.",
+  },
+  {
+    name: 'Larry Peiyuan Gao',
+    ...speakerImages('Larry Peiyuan Gao', 8),
+    role: '"New Guangzhou Resident"',
+    tag: '',
+    talk: 'From a Faraway Land to My Hometown — perspectives on Lingnan family inheritance and cultural integration from the view of an outsider.',
+  },
+  {
     name: 'Bonnie Lau',
     ...speakerImages('Bonnie Lau', 1),
     role: 'BIGZ G10 Student',
@@ -49,20 +63,6 @@ const speakers = [
     role: 'BIGZ G11 Student',
     tag: 'Environmental Biology',
     talk: 'Addressing common prejudices toward Cantonese customs like ancestor worship, and explaining the true meaning behind these traditions.',
-  },
-  {
-    name: 'Dr. Ilona Stricof',
-    ...speakerImages('Dr. Ilona Stricof', 7),
-    role: 'BIGZ AP Teacher',
-    tag: 'PhD in Islamic History, Columbia University',
-    talk: "Guangzhou's Role on the Silk Road of the Abbasid Caliphate — how the thousand-year trade legacy continues to shape the city today.",
-  },
-  {
-    name: 'Larry Peiyuan Gao',
-    ...speakerImages('Larry Peiyuan Gao', 8),
-    role: '"New Guangzhou Resident"',
-    tag: '',
-    talk: 'From a Faraway Land to My Hometown — perspectives on Lingnan family inheritance and cultural integration from the view of an outsider.',
   },
 ]
 

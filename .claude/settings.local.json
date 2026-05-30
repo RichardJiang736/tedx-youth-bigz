@@ -36,7 +36,9 @@
       "Bash(pip3 install *)",
       "Bash(unzip -p speakers.docx word/document.xml)",
       "Bash(mkdir -p /Users/richardjiang/Desktop/GitHub/tedx-official/public/speakers)",
-      "Bash(cp /Users/richardjiang/Desktop/GitHub/tedx-official/figures/*.png /Users/richardjiang/Desktop/GitHub/tedx-official/public/speakers/)"
+      "Bash(cp /Users/richardjiang/Desktop/GitHub/tedx-official/figures/*.png /Users/richardjiang/Desktop/GitHub/tedx-official/public/speakers/)",
+      "Bash(node *)",
+      "Bash(xargs -I{} sh -c 'echo \"{}: $\\(du -sh \"{}\" | cut -f1\\)\"')"
     ]
   }
 }

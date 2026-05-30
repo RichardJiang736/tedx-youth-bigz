@@ -131,7 +131,7 @@ export default function NewsletterSignup() {
                 <button
                   type="submit"
                   disabled={status === 'loading'}
-                  className="px-7 py-3.5 rounded-full bg-white text-brand-red font-semibold text-sm hover:bg-white/95 hover:scale-[1.04] active:scale-[0.97] transition-all duration-600 ease-out-expo whitespace-nowrap shadow-xl shadow-black/20 ripple-hover disabled:opacity-70 disabled:cursor-wait"
+                  className="px-7 py-3.5 rounded-full bg-white/95 text-brand-red font-semibold text-sm hover:bg-white hover:scale-[1.04] active:scale-[0.97] transition-all duration-600 ease-out-expo whitespace-nowrap shadow-xl shadow-black/20 ripple-hover disabled:opacity-70 disabled:cursor-wait"
                 >
                   {status === 'loading' ? 'Sending...' : 'Notify me'}
                 </button>

@@ -31,7 +31,12 @@
       "WebFetch(domain:mp.weixin.qq.com)",
       "WebFetch(domain:www.ted.com)",
       "Bash(curl -sL -H \"User-Agent: Mozilla/5.0 \\(iPhone; CPU iPhone OS 16_0 like Mac OS X\\) AppleWebKit/605.1.15 \\(KHTML, like Gecko\\) Mobile/15E148\" --max-time 15 \"https://mp.weixin.qq.com/s/21VIGE2VVcPJYkirjs5V8Q\")",
-      "Read(//tmp/**)"
+      "Read(//tmp/**)",
+      "Bash(python3 *)",
+      "Bash(pip3 install *)",
+      "Bash(unzip -p speakers.docx word/document.xml)",
+      "Bash(mkdir -p /Users/richardjiang/Desktop/GitHub/tedx-official/public/speakers)",
+      "Bash(cp /Users/richardjiang/Desktop/GitHub/tedx-official/figures/*.png /Users/richardjiang/Desktop/GitHub/tedx-official/public/speakers/)"
     ]
   }
 }

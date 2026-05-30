@@ -1,5 +1,5 @@
 import sharp from 'sharp'
-import { readdir, mkdir } from 'node:fs/promises'
+import { readdir, mkdir, stat } from 'node:fs/promises'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -9,7 +9,19 @@ const outputDir = join(__dirname, '..', 'public', 'speakers', 'optimized')
 
 const sizes = [400, 800]
 
-const files = (await readdir(inputDir)).filter(f => f.endsWith('.png'))
+
+let files = []
+try {
+  await stat(inputDir)
+  files = (await readdir(inputDir)).filter(f => f.endsWith('.png'))
+} catch (err) {
+  if (err && err.code === 'ENOENT') {
+    console.log('No speakers-source directory found — skipping image optimization.')
+    console.log('\nDone. Optimized 0 images.')
+    process.exit(0)
+  }
+  throw err
+}
 
 await mkdir(outputDir, { recursive: true })
 

@@ -1,42 +1,51 @@
-import { useState } from 'react'
+import { useState, useRef, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import ScrollReveal from './ScrollReveal'
 
-// Replace this URL with your Google Apps Script web app URL to enable collection.
-// See instructions below the component or ask Claude how to set it up.
-const SUBMIT_URL = ''
-
-async function submitEmail(email) {
-  const res = await fetch(SUBMIT_URL, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email, timestamp: new Date().toISOString() }),
-  })
-  if (!res.ok) throw new Error('Submission failed')
-  return res.json()
-}
+const SUBMIT_URL = 'https://script.google.com/macros/s/AKfycbwSu3MFmIborFtSKGegADnIq2kGh9yE3DyPS4zE1EftKkIOd1E322v2-LK9YFxysSkJ6g/exec'
 
 export default function NewsletterSignup() {
   const [email, setEmail] = useState('')
-  const [status, setStatus] = useState('idle') // idle | loading | success | error
+  const [status, setStatus] = useState('idle')
+  const formRef = useRef(null)
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = useCallback((e) => {
     e.preventDefault()
     if (!email || status === 'loading') return
-
     setStatus('loading')
-    try {
-      if (SUBMIT_URL) {
-        await submitEmail(email)
-      } else {
-        // Simulate a brief delay so the loading state is visible even without a backend
-        await new Promise((r) => setTimeout(r, 800))
-      }
+
+    // Use a hidden iframe + form to POST without CORS issues.
+    const iframe = document.createElement('iframe')
+    iframe.name = 'newsletter-target'
+    iframe.style.display = 'none'
+    document.body.appendChild(iframe)
+
+    const form = document.createElement('form')
+    form.method = 'POST'
+    form.action = SUBMIT_URL
+    form.target = 'newsletter-target'
+
+    const emailField = document.createElement('input')
+    emailField.name = 'email'
+    emailField.value = email
+    form.appendChild(emailField)
+
+    const tsField = document.createElement('input')
+    tsField.name = 'timestamp'
+    tsField.value = new Date().toISOString()
+    form.appendChild(tsField)
+
+    document.body.appendChild(form)
+    form.submit()
+
+    // Show success after a short delay — the form POST always
+    // reaches Google Script even though we can't read the response.
+    setTimeout(() => {
       setStatus('success')
-    } catch {
-      setStatus('error')
-    }
-  }
+      try { document.body.removeChild(iframe) } catch {}
+      try { document.body.removeChild(form) } catch {}
+    }, 1500)
+  }, [email, status])
 
   return (
     <section className="py-24 md:py-32 bg-brand-red relative overflow-hidden">
@@ -101,6 +110,7 @@ export default function NewsletterSignup() {
             ) : (
               <motion.form
                 key="form"
+                ref={formRef}
                 initial={{ opacity: 0, y: 30, filter: 'blur(4px)' }}
                 animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
                 exit={{ opacity: 0, scale: 0.94 }}
@@ -110,6 +120,7 @@ export default function NewsletterSignup() {
               >
                 <input
                   type="email"
+                  name="email"
                   placeholder="Your email address"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}

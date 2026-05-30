@@ -2,8 +2,8 @@ import { motion } from 'framer-motion'
 import ScrollReveal from './ScrollReveal'
 
 const founders = [
-  'Connie', 'Frank', 'Jenny', 'Jerry', 'Rachel',
-  'Linda', 'Lily', 'Garrison', 'Phoebe', 'Ricky',
+  'Connie Xu', 'Frank Yang', 'Jenny Liang', 'Jerry Chuang', 'Rachel Lai',
+  'Linda Jiang', 'Lily Jiang', 'Garrison Chen', 'Phoebe Yang', 'Ricky Peng',
 ]
 
 const departments = [
@@ -126,7 +126,7 @@ export default function AboutSection() {
             Sound of Phoenix
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <motion.div
               whileHover={{ y: -4 }}
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
@@ -139,7 +139,7 @@ export default function AboutSection() {
                 Sound of Phoenix
               </h3>
               <p className="text-sm text-white/50 leading-relaxed">
-                Sound of Phoenix is the name of the BIGZ TEDx Youth organization.
+                Sound of Phoenix is the name of the TEDx BIGZ Youth organization.
                 The phoenix symbolizes resilience, transformation, and rebirth —
                 qualities that define our student-led team as we rise to create a
                 platform for ideas worth spreading within our school community.
@@ -164,6 +164,34 @@ export default function AboutSection() {
                 local roots meeting global perspectives. This year&apos;s event
                 examines how social media, culture, and family shape who we are.
               </p>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ y: -4 }}
+              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+              className="ripple-hover rounded-2xl glass-card border-brand-red/20 p-8 md:p-10 transition-all duration-700 ease-out-expo glass-card-hover md:col-span-2 lg:col-span-1"
+            >
+              <span className="inline-block px-3 py-1 rounded-full bg-brand-red text-xs font-semibold uppercase tracking-wider text-white mb-4">
+                2025 Theme
+              </span>
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 font-display italic">
+                Stand-Up Comedy
+              </h3>
+              <p className="text-sm text-white/50 leading-relaxed mb-4">
+                A talkshow with the theme &ldquo;Reality Check&rdquo; — 8 teachers
+                and 1 student took the stage, each delivering 5 to 15 minutes of
+                humor and unique perspectives. The event welcomed G8–12 students
+                and staff to share their creativity through stand-up comedy.
+              </p>
+              <a
+                href="https://mp.weixin.qq.com/s/21VIGE2VVcPJYkirjs5V8Q"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-xs font-semibold text-brand-red hover:text-red-400 transition-all duration-500 ease-out-expo group"
+              >
+                Read more on WeChat
+                <span className="inline-block transition-transform duration-500 ease-out-expo group-hover:translate-x-1">&rarr;</span>
+              </a>
             </motion.div>
           </div>
         </ScrollReveal>

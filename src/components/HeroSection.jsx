@@ -46,7 +46,7 @@ export default function HeroSection() {
           variants={letterStagger}
           className="text-xs md:text-sm font-semibold uppercase tracking-[0.25em] text-white/50 mb-8"
         >
-          Sound of Phoenix &mdash; BIGZ TEDx Youth
+          Sound of Phoenix &mdash; TEDx BIGZ Youth
         </motion.p>
 
         {/* Main title — intentional left overhang for editorial drama */}
@@ -59,7 +59,7 @@ export default function HeroSection() {
         >
           TEDx
           <br />
-          <span className="text-white/80 not-italic">Youth BIGZ</span>
+          <span className="text-white/80 not-italic">BIGZ Youth</span>
         </motion.h1>
 
         {/* Theme — back on the shared axis */}
@@ -92,7 +92,7 @@ export default function HeroSection() {
           <span className="hidden sm:inline text-white/15 text-2xl font-thin">|</span>
           <span className="text-white/70 font-semibold">June 6, 2026</span>
           <span className="hidden sm:inline text-white/15 text-2xl font-thin">|</span>
-          <span>14:00 – 17:30</span>
+          <span>14:30 – 17:00</span>
         </motion.div>
 
         {/* Scroll hint — shared axis */}

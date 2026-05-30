@@ -46,7 +46,7 @@ export default function EventsSection() {
               </div>
               <div>
                 <p className="text-xs font-semibold uppercase tracking-wider text-brand-gray mb-1">Time</p>
-                <p className="text-lg font-bold text-brand-black">14:00 – 17:30</p>
+                <p className="text-lg font-bold text-brand-black">14:30 – 17:00</p>
               </div>
               <div>
                 <p className="text-xs font-semibold uppercase tracking-wider text-brand-gray mb-1">Location</p>

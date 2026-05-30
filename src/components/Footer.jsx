@@ -11,10 +11,10 @@ export default function Footer() {
           <ScrollReveal>
             <div>
               <span className="text-brand-red font-black text-xl tracking-tight">
-                TEDx<span className="text-white">Youth</span>
+                TEDx<span className="text-white">BIGZ</span>
               </span>
               <span className="text-white font-bold text-xl tracking-tight ml-2 font-display italic">
-                BIGZ
+                Youth
               </span>
               <p className="mt-4 text-sm text-gray-400 leading-relaxed max-w-xs">
                 Independently organized TEDx event at BIGZ. Ideas worth spreading,
@@ -53,7 +53,7 @@ export default function Footer() {
                   href="mailto:tedxyouthbigz@example.com"
                   className="text-sm text-gray-400 hover:text-white transition-all duration-500 ease-out-expo"
                 >
-                  tedxyouthbigz@example.com
+                  tedxbigzyouth@example.com
                 </a>
                 <div className="flex gap-5 mt-2">
                   {['Instagram', '小红书', '公众号'].map((platform) => (
@@ -75,7 +75,7 @@ export default function Footer() {
             This independent TEDx event is operated under license from TED.
           </p>
           <p className="text-xs text-gray-600">
-            &copy; {new Date().getFullYear()} TEDx Youth BIGZ. All rights reserved.
+            &copy; {new Date().getFullYear()} TEDx BIGZ Youth. All rights reserved.
           </p>
         </div>
       </div>

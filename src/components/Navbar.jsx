@@ -34,10 +34,10 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 h-16 md:h-20 flex items-center justify-between">
         <a href="#home" className="flex items-center gap-3 group">
           <span className="text-brand-red font-black text-xl md:text-2xl tracking-tight">
-            TEDx<span className={`transition-all duration-1000 ${scrolled ? 'text-brand-black' : 'text-white'}`}>Youth</span>
+            TEDx<span className={`transition-all duration-1000 ${scrolled ? 'text-brand-black' : 'text-white'}`}>BIGZ</span>
           </span>
           <span className={`hidden sm:inline font-bold text-lg md:text-xl tracking-tight transition-all duration-1000 ${scrolled ? 'text-brand-black' : 'text-white/80'}`}>
-            BIGZ
+            Youth
           </span>
         </a>
 

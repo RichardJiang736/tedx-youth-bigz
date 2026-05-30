@@ -56,13 +56,20 @@ export default function Footer() {
                   tedxbigzyouth@example.com
                 </a>
                 <div className="flex gap-5 mt-2">
-                  {['Instagram', '小红书', '公众号'].map((platform) => (
-                    <span
-                      key={platform}
-                      className="text-sm text-gray-500 hover:text-white cursor-pointer transition-all duration-500 ease-out-expo hover:-translate-y-0.5"
+                  {[
+                    { name: 'Instagram', href: 'https://www.instagram.com/tedx_bigzyouth?utm_source=qr' },
+                    { name: '小红书', href: 'https://bit.ly/4dFfo11' },
+                    { name: '公众号', href: '#' },
+                  ].map((platform) => (
+                    <a
+                      key={platform.name}
+                      href={platform.href}
+                      target={platform.name === 'Instagram' ? '_blank' : undefined}
+                      rel={platform.name === 'Instagram' ? 'noopener noreferrer' : undefined}
+                      className="text-sm text-gray-500 hover:text-white transition-all duration-500 ease-out-expo hover:-translate-y-0.5"
                     >
-                      {platform}
-                    </span>
+                      {platform.name}
+                    </a>
                   ))}
                 </div>
               </div>

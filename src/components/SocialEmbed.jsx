@@ -2,8 +2,8 @@ import { motion } from 'framer-motion'
 import ScrollReveal from './ScrollReveal'
 
 const platforms = [
-  { name: 'Instagram', handle: '@tedxbigzyouth', href: 'https://instagram.com', gradient: 'from-pink-500 to-orange-400' },
-  { name: '小红书', handle: '@tedxbigzyouth', href: '#', gradient: 'from-red-500 to-red-600', label: 'RED' },
+  { name: 'Instagram', handle: '@tedxbigzyouth', href: 'https://www.instagram.com/tedx_bigzyouth?utm_source=qr', gradient: 'from-pink-500 to-orange-400' },
+  { name: '小红书', handle: '@tedxbigzyouth', href: 'https://bit.ly/4dFfo11', gradient: 'from-red-500 to-red-600', label: 'RED' },
   { name: '公众号', handle: 'TEDx BIGZ Youth', href: '#', gradient: 'from-emerald-500 to-green-600', label: 'WeChat' },
 ]
 

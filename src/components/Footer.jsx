@@ -58,7 +58,7 @@ export default function Footer() {
                 <div className="flex gap-5 mt-2">
                   {[
                     { name: 'Instagram', href: 'https://www.instagram.com/tedx_bigzyouth?utm_source=qr' },
-                    { name: '小红书', href: 'https://bit.ly/4dFfo11' },
+                    { name: '小红书', href: 'https://bit.ly/49uwo7y' },
                     { name: '公众号', href: '#' },
                   ].map((platform) => (
                     <a
